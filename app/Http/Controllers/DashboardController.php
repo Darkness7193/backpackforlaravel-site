@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 
-class IndexController
+class DashboardController
 {
     public function index(Request $request): View
     {
-        return view('index', [
+        return view('dashboard', [
             'accordion_texts' => AccordionText::all(), //where('accordion', 'main_page')
         ]);
     }

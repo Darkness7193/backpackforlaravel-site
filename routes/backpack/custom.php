@@ -18,6 +18,7 @@ Route::group([
 ], function () { // custom admin routes
     Route::get('settings', 'SettingsController@index')->name('page.settings.index');
     Route::crud('accordion-text', 'AccordionTextCrudController');
+    Route::crud('user', 'UserCrudController');
 }); // this should be the absolute last line of this file
 
 /**

@@ -3,3 +3,5 @@
 
 <x-backpack::menu-item title="Settings" icon="la la-question" :link="backpack_url('settings')" />
 <x-backpack::menu-item title="Accordion texts" icon="la la-question" :link="backpack_url('accordion-text')" />
+
+<x-backpack::menu-item title="Users" icon="la la-question" :link="backpack_url('user')" />
