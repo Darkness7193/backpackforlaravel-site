@@ -17,9 +17,9 @@
                 <div class="card-body">
                     <form class="settings-form" name="settings-form" method="post" action="{{ route('page.settings.save') }}">
                         @csrf
-                        Авторизация
-                        <input type="hidden" name="enable-authorization" value="off"> <!-- unchecked checkboxes aren't sent by default -->
-                        <input type="checkbox" name="enable-authorization" {{ $site_settings['enable-authorization'] === 'on' ? 'checked' : 'unchecked' }}>
+                        Принудительная авторизация
+                        <input type="hidden" name="forced-authorization" value="off"> <!-- unchecked checkboxes aren't sent by default -->
+                        <input type="checkbox" name="forced-authorization" {{ $site_settings['forced-authorization'] === 'on' ? 'checked' : 'unchecked' }}>
                     </form>
                 </div>
             </div>

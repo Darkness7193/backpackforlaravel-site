@@ -20,7 +20,7 @@
 
             <!-- Settings Dropdown -->
             @php use App\Http\Controllers\Admin\SettingsController; @endphp
-            @if(SettingsController::get()['enable-authorization'] === 'on')
+            @if(SettingsController::get()['forced-authorization'] === 'on')
                 @auth
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="right" width="48">
@@ -65,6 +65,7 @@
                             </a>
                         @endif
 
+                        <!--
                         @if (Route::has('register'))
                             <a
                                 href="{{ route('register') }}"
@@ -72,6 +73,7 @@
                                 Register
                             </a>
                         @endif
+                        -->
                     </nav>
                 @endauth
             @endif
