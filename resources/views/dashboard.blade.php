@@ -20,7 +20,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
 
                     <div class="accordion" id="accordion-1" style="max-width: 30rem; margin: 1rem auto 2rem;">
-                        @if(!empty($accordion_texts))
+                        @if(!$accordion_texts->isEmpty())
                             @foreach ($accordion_texts as $accordion_text)
                                 <div class="accordion__item">
                                     <div class="accordion__header">

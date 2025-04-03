@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
 
-            $table->string('accordion', 100);
+            $table->string('accordion', 100)->default('main_page');
             $table->string('title', 100);
             $table->string('text', 1000);
         });
