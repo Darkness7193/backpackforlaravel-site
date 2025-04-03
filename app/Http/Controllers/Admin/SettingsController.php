@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Storage;
 
-/**
- * Class SettingsController
- * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
- */
+
+
+
 class SettingsController extends Controller
 {
     public function index()
@@ -21,6 +21,18 @@ class SettingsController extends Controller
             ],
             'page' => 'resources/views/admin/settings.blade.php',
             'controller' => 'app/Http/Controllers/Admin/SettingsController.php',
+            'site_settings' => $this->get(),
         ]);
+    }
+
+    public function save(Request $request)
+    {
+        Storage::disk('local')->put('site_settings.json', json_encode($request->except('_token')));
+        return redirect()->back();
+    }
+
+    static public function get()
+    {
+        return json_decode(Storage::disk('local')->get('site_settings.json'), true);
     }
 }

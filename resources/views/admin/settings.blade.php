@@ -1,18 +1,36 @@
 @extends(backpack_view('blank'))
 
+
+
+
 @section('content')
+
 <section class="header-operation container-fluid animated fadeIn d-flex mb-2 align-items-baseline d-print-none" bp-section="page-header">
     <h1 class="text-capitalize mb-0" bp-section="page-heading">Settings</h1>
     <p class="ms-2 ml-2 mb-0" bp-section="page-subheading">Page for Settings</p>
 </section>
+
 <section class="content container-fluid animated fadeIn" bp-section="content">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    Go to <code>{{ $page }}</code> to edit this view or <code>{{ $controller }}</code> to edit the controller.
+                    <form class="settings-form" name="settings-form" method="post" action="{{ route('page.settings.save') }}">
+                        @csrf
+                        Авторизация
+                        <input type="hidden" name="enable-authorization" value="off"> <!-- unchecked checkboxes aren't sent by default -->
+                        <input type="checkbox" name="enable-authorization" {{ $site_settings['enable-authorization'] === 'on' ? 'checked' : 'unchecked' }}>
+                    </form>
                 </div>
             </div>
+
+            <x-primary-button
+                name="save_settings"
+                class="save-btn"
+                type="button"
+                onclick="document.getElementsByClassName('settings-form')[0].submit()"
+                > Сохранить
+            </x-primary-button>
         </div>
     </div>
 @endsection

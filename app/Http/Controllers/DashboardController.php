@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AccordionText;
+use App\Settings\GeneralSettings;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
