@@ -10,11 +10,13 @@ class AccordionText extends Model
     use CrudTrait;
     protected $fillable = [
         'rank',
+        'activity',
         'title',
         'text',
     ];
     protected $translatable = [
         'rank',
+        'activity',
         'title',
         'text',
     ];

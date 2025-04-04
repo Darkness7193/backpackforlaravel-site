@@ -15,6 +15,7 @@ class DashboardController
         return view('dashboard', [
             'accordion_texts' => AccordionText
                 ::where('accordion', '=', 'main_page')
+                ->where('activity', '=', true)
                 ->orderBy('rank', 'asc')
                 ->get(),
         ]);

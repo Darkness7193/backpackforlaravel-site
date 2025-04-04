@@ -29,6 +29,7 @@ class AccordionTextCrudController extends CrudController
         CRUD::setModel(\App\Models\AccordionText::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/accordion-text');
         CRUD::setEntityNameStrings('accordion text', __('accordion texts'));
+        $this->crud->denyAccess('show');
     }
 
     /**
@@ -64,6 +65,13 @@ class AccordionTextCrudController extends CrudController
             'label' => __('rank'),
             'type' => 'number',
             'default' => 500,
+        ]);
+
+        CRUD::field([
+            'name' => 'activity',
+            'label' => __('activity'),
+            'type' => 'boolean',
+            'default' => true,
         ]);
 
         CRUD::field([
