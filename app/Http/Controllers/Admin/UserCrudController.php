@@ -74,7 +74,7 @@ class UserCrudController extends CrudController
             'name' => 'password',
             'label' => __('Password'),
             'type' => 'password',
-        ]);
+        ])->remove();
 
         CRUD::field([
             'name' => 'is_admin',

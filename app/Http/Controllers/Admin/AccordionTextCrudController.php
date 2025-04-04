@@ -69,6 +69,7 @@ class AccordionTextCrudController extends CrudController
             'name' => 'text',
             'label' => __('Text'),
             'type' => 'custom_tinymce',
+            'escape' => false,
         ]);
 
         foreach (CRUD::fields() as $k => $c) {
