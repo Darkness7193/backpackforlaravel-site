@@ -12,6 +12,12 @@
     box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
 }
 
+.accordion__header, .accordion__body {
+    width: 92%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
 .accordion__header {
     display: flex;
     justify-content: space-between;
