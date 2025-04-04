@@ -12,4 +12,8 @@ class AccordionText extends Model
         'title',
         'text',
     ];
+    protected $translatable = [
+        'title',
+        'text',
+    ];
 }

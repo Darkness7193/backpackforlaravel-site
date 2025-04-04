@@ -28,7 +28,7 @@ class UserCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\User::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/user');
-        CRUD::setEntityNameStrings('user', 'users');
+        CRUD::setEntityNameStrings('user', __('users'));
     }
 
     /**
@@ -81,6 +81,10 @@ class UserCrudController extends CrudController
             'label' => __('Is admin'),
             'type' => 'checkbox',
         ]);
+
+        foreach (CRUD::fields() as $k => $c) {
+            CRUD::field($k)->label(__($k));
+        }
 
         /**
          * Fields can be defined using the fluent syntax:

@@ -28,7 +28,7 @@ class AccordionTextCrudController extends CrudController
     {
         CRUD::setModel(\App\Models\AccordionText::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/accordion-text');
-        CRUD::setEntityNameStrings('accordion text', 'accordion texts');
+        CRUD::setEntityNameStrings('accordion text', __('accordion texts'));
     }
 
     /**
@@ -70,6 +70,10 @@ class AccordionTextCrudController extends CrudController
             'label' => __('Text'),
             'type' => 'custom_tinymce',
         ]);
+
+        foreach (CRUD::fields() as $k => $c) {
+            CRUD::field($k)->label(__($k));
+        }
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');
