@@ -6,6 +6,7 @@
         relative_urls: false,
         skin: "oxide-dark",
         content_css: "dark",
+        language: 'ru',
         plugins: [
             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
