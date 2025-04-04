@@ -61,13 +61,13 @@ class AccordionTextCrudController extends CrudController
 
         CRUD::field([
             'name' => 'title',
-            'label' => 'Заголовок',
+            'label' => __('Title'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'text',
-            'label' => 'Текст',
+            'label' => __('Text'),
             'type' => 'text',
         ]);
         /**

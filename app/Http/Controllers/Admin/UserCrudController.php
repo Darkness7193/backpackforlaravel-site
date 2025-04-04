@@ -60,25 +60,25 @@ class UserCrudController extends CrudController
 
         CRUD::field([
             'name' => 'name',
-            'label' => 'Логин',
+            'label' => __('Login'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'email',
-            'label' => 'Почта',
+            'label' => __('Email'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'password',
-            'label' => 'Пароль',
+            'label' => __('Password'),
             'type' => 'password',
         ]);
 
         CRUD::field([
             'name' => 'is_admin',
-            'label' => 'Администратор',
+            'label' => __('Is admin'),
             'type' => 'checkbox',
         ]);
 
