@@ -9,7 +9,6 @@
 .accordion__item {
     margin-bottom: 0.5rem;
     border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
 }
 
 .accordion__header, .accordion__body {
@@ -22,7 +21,7 @@
     padding: 0.75rem 1rem;
     color: #fff;
     font-weight: 500;
-    background-color: #29364A;
+    background-color: #607cae;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
 }
@@ -62,7 +61,7 @@
 .accordion__body {
     padding: 0.75rem 1rem;
     overflow: hidden;
-    background: #34435e;
+    background: #7998da;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
 }
