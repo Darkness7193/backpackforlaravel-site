@@ -33,7 +33,7 @@
                 > Сохранить
             </x-primary-button>
 
-            <x-forms.tinymce-editor/>
+            <x-forms.custom-tinymce-field/>
         </div>
     </div>
 @endsection

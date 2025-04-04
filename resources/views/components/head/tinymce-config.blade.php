@@ -1,7 +1,7 @@
 <script src="{{ URL::to('/js/vendor/tinymce/js/tinymce/tinymce.min.js') }}" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-        selector: 'textarea#basic-example',
+        selector: 'textarea.tinymce-editor',
         height: 500,
         relative_urls: false,
         skin: "oxide-dark",

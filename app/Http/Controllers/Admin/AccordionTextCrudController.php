@@ -68,7 +68,7 @@ class AccordionTextCrudController extends CrudController
         CRUD::field([
             'name' => 'text',
             'label' => __('Text'),
-            'type' => 'text',
+            'type' => 'custom_tinymce',
         ]);
         /**
          * Fields can be defined using the fluent syntax:

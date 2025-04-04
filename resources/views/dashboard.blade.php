@@ -27,7 +27,7 @@
                                         {{ $accordion_text->title }}
                                     </div>
                                     <div class="accordion__body">
-                                        {{ $accordion_text->text }}
+                                        {!! $accordion_text->text !!}
                                     </div>
                                 </div>
                             @endforeach
