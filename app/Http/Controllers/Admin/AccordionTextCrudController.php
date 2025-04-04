@@ -60,6 +60,13 @@ class AccordionTextCrudController extends CrudController
         CRUD::setFromDb(); // set fields from db columns.
 
         CRUD::field([
+            'name' => 'rank',
+            'label' => __('rank'),
+            'type' => 'number',
+            'default' => 500,
+        ]);
+
+        CRUD::field([
             'name' => 'title',
             'label' => __('Title'),
             'type' => 'text',

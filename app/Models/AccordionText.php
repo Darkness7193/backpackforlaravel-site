@@ -9,10 +9,12 @@ class AccordionText extends Model
 {
     use CrudTrait;
     protected $fillable = [
+        'rank',
         'title',
         'text',
     ];
     protected $translatable = [
+        'rank',
         'title',
         'text',
     ];

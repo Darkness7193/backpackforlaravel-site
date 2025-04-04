@@ -13,7 +13,10 @@ class DashboardController
     public function index(Request $request): View
     {
         return view('dashboard', [
-            'accordion_texts' => AccordionText::all(), //where('accordion', 'main_page')
+            'accordion_texts' => AccordionText
+                ::where('accordion', '=', 'main_page')
+                ->orderBy('rank', 'asc')
+                ->get(),
         ]);
     }
 }

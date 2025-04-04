@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('accordion', 100)->default('main_page');
+            $table->integer('rank')->default(500);
             $table->string('title', 100);
             $table->string('text', 1000);
         });
