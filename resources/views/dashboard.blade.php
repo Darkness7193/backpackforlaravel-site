@@ -6,6 +6,7 @@
 </head>
 
 <!-- imports: -->
+<link rel="stylesheet" href="{{ asset('css/global.css') }}">
 <link rel="stylesheet" href="{{ asset('css/accordion.css') }}">
 <script src="{{ asset('js/accordion.js') }}" type="module"></script>
 
@@ -32,8 +33,10 @@
                                 </div>
                             @endforeach
                         @else
-                            <div class="accordion__header">
-                                В административной панели нет соответствующих записей
+                            <div class="horizontal-center">
+                                <div class="accordion-fail-message">
+                                    В административной панели нет соответствующих записей
+                                </div>
                             </div>
                         @endif
                     </div>

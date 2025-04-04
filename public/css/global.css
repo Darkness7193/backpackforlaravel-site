@@ -1,0 +1,69 @@
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.icon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 21px;
+    width: 21px;
+    border: 0;
+    vertical-align: middle;
+}
+
+input:disabled, select:disabled {
+    opacity: 0.60;
+}
+
+input, select {
+    font-size: 14px;
+}
+
+/* Template */
+    .vertical-arrange {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .horizontal-arrange {
+        display:flex;
+        flex-direction: row;
+    }
+
+    .vertical-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .horizontal-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-align {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .left-align {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+
+.default-input-wrapper {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.foot-margin {
+    margin-bottom: 300px;
+}

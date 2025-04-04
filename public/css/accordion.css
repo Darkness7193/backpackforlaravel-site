@@ -18,18 +18,25 @@
     margin-right: 4%;
 }
 
-.accordion__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.accordion__header, .accordion-fail-message {
     padding: 0.75rem 1rem;
     color: #fff;
     font-weight: 500;
     background-color: #29364A;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     transition: background-color 0.2s ease-out;
+}
+
+.accordion-fail-message {
+    width: max-content;
 }
 
 .accordion__header::after {
