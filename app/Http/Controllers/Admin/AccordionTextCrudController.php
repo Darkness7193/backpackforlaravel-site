@@ -58,6 +58,18 @@ class AccordionTextCrudController extends CrudController
     {
         CRUD::setValidation(AccordionTextRequest::class);
         CRUD::setFromDb(); // set fields from db columns.
+
+        CRUD::field([
+            'name' => 'title',
+            'label' => 'Заголовок',
+            'type' => 'text',
+        ]);
+
+        CRUD::field([
+            'name' => 'text',
+            'label' => 'Текст',
+            'type' => 'text',
+        ]);
         /**
          * Fields can be defined using the fluent syntax:
          * - CRUD::field('price')->type('number');
