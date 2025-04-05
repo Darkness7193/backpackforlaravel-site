@@ -60,30 +60,26 @@ class UserCrudController extends CrudController
 
         CRUD::field([
             'name' => 'name',
-            'label' => __('Login'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'email',
-            'label' => __('Email'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'password',
-            'label' => __('Password'),
             'type' => 'password',
         ])->remove();
 
         CRUD::field([
             'name' => 'is_admin',
-            'label' => __('Is admin'),
             'type' => 'checkbox',
         ]);
 
-        foreach (CRUD::fields() as $k => $c) {
-            CRUD::field($k)->label(__($k));
+        foreach (CRUD::fields() as $key => $value) {
+            CRUD::field($key)->label(__($key));
         }
 
         /**

@@ -41,7 +41,7 @@ class AccordionTextCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::setFromDb(); // set columns from db columns.
-
+        $this->crud->setColumnDetails('text', ['value' => '[html]']);
 
         /**
          * Columns can be defined using the fluent syntax:
@@ -62,33 +62,29 @@ class AccordionTextCrudController extends CrudController
 
         CRUD::field([
             'name' => 'rank',
-            'label' => __('rank'),
             'type' => 'number',
             'default' => 500,
         ]);
 
         CRUD::field([
             'name' => 'activity',
-            'label' => __('activity'),
             'type' => 'boolean',
             'default' => true,
         ]);
 
         CRUD::field([
             'name' => 'title',
-            'label' => __('Title'),
             'type' => 'text',
         ]);
 
         CRUD::field([
             'name' => 'text',
-            'label' => __('Text'),
             'type' => 'custom_tinymce',
             'escape' => false,
         ]);
 
-        foreach (CRUD::fields() as $k => $c) {
-            CRUD::field($k)->label(__($k));
+        foreach (CRUD::fields() as $key => $value) {
+            CRUD::field($key)->label(__($key));
         }
         /**
          * Fields can be defined using the fluent syntax:
